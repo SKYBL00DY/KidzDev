@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KidzDev</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/fav//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/fav//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/fav//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/fav//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/fav//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/fav//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/fav//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/fav//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/fav//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav//favicon-16x16.png">
+    <link rel="manifest" href="img/fav//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+    <div class="header">
+      <div class="logo">KidzDev</div>
+      <nav class="nav">
+        <div class="nav-wrapper">
+          <div class="tabs">
+            <button class="tabs-button" onclick="openTab('home')">Главная</button>
+            <button class="tabs-button" onclick="openTab('tasks')">
+              Доска задач
+            </button>
+            <button class="tabs-button" onclick="openTab('shop')">
+              Магазин наград
+            </button>        
+          </div>
+          <div class="reg-enter">
+            <button class="read-more" data-popup="popup0">Регистрация</button>
+            /
+            <button class="read-more" data-popup="popup1">Вход</button>
+            /
+            <button class="read-more" data-popup="profile">Профиль</button>
+          </div>
+          <div class="menu">
+            <button
+              id="roundButton"
+              onclick="openMenu('growing-block')"
+              class="round-button"
+            >
+              <div class="nickname">Nickname</div>
+              <img src="img/avatar_profile.jpg" class="profile__img" alt="" />
+              <div class="points">
+                100 <img src="img/icon/point.svg" alt="points" />
+              </div>
+            </button>
+          </div>
+          <div id="growing-block">
+            Список лидеров
+            <br>
+            <br>
+            <ul>
+              <li>1. <button class="read-more" data-popup="profile">Nickname</button></li>
+              <li>2. <button class="read-more" data-popup="profile">Nickname</button></li>
+              <li>3. <button class="read-more" data-popup="profile">Nickname </button></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="burger">
+        <span></span>
+      </div>
+    </div>
+    <div id="shop" class="tabs-content">
+      <div class="container">
+        <div class="shop-container" >
+          <div class="card">
+            <img src="img/spiner.jpg" class="product_img" />
+            <div class="product">
+              <h5 class="product_title">спиннер</h5>
+              <div class="product_text">
+                антистрессовая игрушка, вращающаяся вокруг оси, занимающая руки
+                и успокаивающая нервы
+              </div>
+              <div class="product_price">
+                <button class="purchasing">купить</button>
+                <div class="points_shop">
+                  10 <img src="img/icon/point.svg" alt="points" />
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/car.jpg" class="product_img" />
+            <div class="product">
+              <h5 class="product_title">машинка</h5>
+              <div class="product_text">
+                миниатюрная копия автомобиля, увлекательная для игр и
+                коллекционирования
+              </div>
+              <div class="product_price">
+                <button class="purchasing">купить</button>
+                <div class="points_shop">
+                  20 <img src="img/icon/point.svg" alt="points" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/kraski.jpg" class="product_img" />
+            <div class="product">
+              <h5 class="product_title">краски</h5>
+              <div class="product_text">
+                цветной материал для рисования, создания рисунков и украшения
+                поверхностей
+              </div>
+              <div class="product_price">
+                <button class="purchasing">купить</button>
+                <div class="points_shop">
+                  30 <img src="img/icon/point.svg" alt="points" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/pazl.jpg" class="product_img" />
+            <div class="product">
+              <h5 class="product_title">Пазл 3D</h5>
+              <div class="product_text">
+                увлекательная головоломка для развития логики и
+                пространственного мышления
+              </div>
+              <div class="product_price">
+                <button class="purchasing">купить</button>
+                <div class="points_shop">
+                  40 <img src="img/icon/point.svg" alt="points" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/igra.jpg" class="product_img" />
+            <div class="product">
+              <h5 class="product_title">Настольная игра</h5>
+              <div class="product_text">
+                весёлое развлечение для друзей и всей семьи
+              </div>
+              <div class="product_price">
+                <button class="purchasing">купить</button>
+                <div class="points_shop">
+                  50 <img src="img/icon/point.svg" alt="points" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/nochnik.jpg" class="product_img" />
+            <div class="product">
+              <h5 class="product_title">Светящаяся лампа</h5>
+              <div class="product_text">
+                ночник с разноцветной подсветкой для уютных вечеров
+              </div>
+              <div class="product_price">
+                <button class="purchasing">купить</button>
+                <div class="points_shop">
+                  60 <img src="img/icon/point.svg" alt="points" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/blocnot.webp" class="product_img" />
+            <div class="product">
+              <h5 class="product_title">Дневник с замком</h5>
+              <div class="product_text">личный блокнот для секретов и идей</div>
+              <div class="product_price">
+                <button class="purchasing">купить</button>
+                <div class="points_shop">
+                  70 <img src="img/icon/point.svg" alt="points" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/futbolka.webp" class="product_img" />
+            <div class="product">
+              <h5 class="product_title">Футболка с принтом</h5>
+              <div class="product_text">
+                стильный дизайн, чтобы выделиться среди друзей
+              </div>
+              <div class="product_price">
+                <button class="purchasing">купить</button>
+                <div class="points_shop">
+                  80 <img src="img/icon/point.svg" alt="points" />
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div id="tasks" class="tabs-content" >
+      <div class="container">
+        <div class="courses" style="display: none">
+          <div class="courses-items" >
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+            <button class="courses-item">
+              <img src="img/web.jpg" alt="" />
+              <div class="courses-item-title">WEB</div>
+            </button>
+          </div>
+        </div>
+        <div class="task"  >
+          <div class="filter-buttons">
+            <button class="filter-button active" data-category="all">
+              Все
+            </button>
+            <button class="filter-button" data-category="category1">
+              задачи
+            </button>
+            <button class="filter-button" data-category="category2">
+              тесты
+            </button>
+            <button class="filter-button" data-category="category3">
+              практикум
+            </button>
+          </div>
+          <div class="task-items">
+            <div class="task-item" data-category="category1">
+              <img src="img/export_606oqm.png" alt="" />
+              <div class="task-item-conditions">
+                <div class="task-item-conditions-title">Генератор паролей</div>
+                <div class="task-item-conditions-text">
+                  Создайте программу, которая генерирует случайный пароль
+                  заданной длины с буквами, цифрами и специальными символами
+                </div>
+                <button class="task-item-conditions-btn">решать</button>
+              </div>
+            </div>
+            <div class="task-item" data-category="category1">
+              <img src="img/export_gr4yin.png" alt="" />
+              <div class="task-item-conditions">
+                <div class="task-item-conditions-title">Анализ текста</div>
+                <div class="task-item-conditions-text">
+                  Запросите у пользователя текст и выведите количество слов,
+                  предложений и уникальных слов
+                </div>
+                <button class="task-item-conditions-btn">решать</button>
+              </div>
+            </div>
+            <div class="task-item" data-category="category2">
+              <img src="img/export_hdcxt.png" alt="" />
+              <div class="task-item-conditions">
+                <div class="task-item-conditions-title">Конвертер валют</div>
+                <div class="task-item-conditions-text">
+                  Реализуйте программу, которая запрашивает сумму в одной валюте
+                  и переводит её в другую, используя фиксированный курс
+                </div>
+                <button class="task-item-conditions-btn">решать</button>
+              </div>
+            </div>
+            <div class="task-item" data-category="category3">
+              <img src="img/image3.png" alt="" />
+              <div class="task-item-conditions">
+                <div class="task-item-conditions-title">Письма</div>
+                <div class="task-item-conditions-text">
+                  Напишите программу, которая запрашивает адрес электронной
+                  почты, тему и сообщение, а затем отправляет письмо
+                </div>
+                <button class="task-item-conditions-btn">решать</button>
+              </div>
+            </div>
+            <div class="task-item" data-category="category2">
+              <img src="img/image4.png" alt="" />
+              <div class="task-item-conditions">
+                <div class="task-item-conditions-title">Калькулятор</div>
+                <div class="task-item-conditions-text">
+                  Запросите часы работы, ставку за час и налог, выведите
+                  итоговую зарплату после вычета налога
+                </div>
+                <button class="task-item-conditions-btn">решать</button>
+              </div>
+            </div>
+            <div class="task-item" data-category="category3">
+              <img src="img/image5.png" alt="" />
+              <div class="task-item-conditions">
+                <div class="task-item-conditions-title">Сортировка заказов</div>
+                <div class="task-item-conditions-text">
+                  Программа должна принять список заказов с ценами и
+                  отсортировать их по возрастанию цены
+                </div>
+                <button class="task-item-conditions-btn">решать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="home" class="tabs-content" >
+      <div class="home">
+        <img src="img/logoi.png" id="f3" alt="" />
+        <div class="container">
+          <div class="main-info">
+            <h2 class="main-title">
+              KidzDev
+            </h2>
+            <p class="main-text">Веб-приложение для практического применения навыков программирования у детей на базе технопарка "ИЗОБРЕТАРИУМ"
+            </p>
+        </div>
+        <div class="main-actuality">
+          <h3 class="common-title">Актуальность</h3>
+          <h4 class="down-title">Есть проблема? Есть решение!</h4>
+          <div class="problem-solution">
+            <div class="problem">
+              <h3>Проблема ?</h3>
+              <ul>
+                <li>1. Дети изучают программирование, но часто не понимают, как применять знания на практике.</li>
+                <li>2. Недостаток интерактивных и увлекательных платформ для закрепления навыков.</li>
+                <li>3. Разрыв между теорией и реальными проектами.</li>
+              </ul>
+            </div>
+            <div class="solution">
+              <h3>Pешение !</h3>
+              <div class="solution-title">KidzDev</div>
+            </div>
+          </div>
+        </div>
+          <div class="main-audience">
+          <div class="common-title">Целевая аудитория</div>
+            <div class="main-audience-items">
+                <div class="main-audience-item main-audience-item-grey">
+                    <div class="main-audience-item-text">
+                      <div class="main-audience-item-title">Дети:</div>
+                      Возраст: 8–16 лет
+                      <br>
+                      Интерес к программированию, робототехнике, технологиям.
+                      <br>
+                      <br>
+                      <div class="main-audience-item-title">Родители:</div> 
+                      Заинтересованы в развитии практических навыков у детей.
+                      <br>
+                      <br>
+                      <div class="main-audience-item-title">Педагоги:</div> 
+                      Ищут инструменты для вовлечения детей в проекты.
+                    </div>
+                </div>
+                <div class="main-audience-item main-audience-item-image">
+                    <img src="img/diograma.png" alt="">
+                </div>
+            </div>
+          </div>
+          <div class="main-Advantages">
+          <h3 class="common-title">Преимущества</h3>
+          <div class="main-Advantages-list">
+            <div class="question">Интеграция с образовательной средой</div>
+            <div class="answer">
+              Совместимость с школьной программой и курсами технопарка
+            </div>
+            <div class="question">Органичное дополнение учебного процесса</div>
+            <div class="answer">
+              KidzDev — не замена, а дополнение:
+              <br>
+              <br>
+              Углубление знаний через практику
+              <br>
+              Возможность использовать платформу как в классе, так и дома
+              <br>
+              Поддержка разных форматов обучения: индивидуального и группового
+            </div>
+            <div class="question"> Геймификация и вознаграждения</div>
+            <div class="answer">
+              Обучение через игру:
+              <br>
+              <br>
+              Баллы, уровни, достижения за выполнение заданий
+              <br>  
+              Соревнования между учениками (таблица лидеров)
+              <br>
+              Мотивация к постоянному прогрессу
+            </div>
+            <div class="question">Виртуальная валюта и реальные призы</div>
+            <div class="answer">
+              KidzDev Coin:
+              <br>
+              <br>
+              Дети зарабатывают виртуальную валюту за выполнение задач
+              <br>
+              Возможность обмена на реальные призы
+            </div>
+            <div class="question">Практическое обучение через реальные проекты</div>
+            <div class="answer">
+              KidzDev — это не только теория
+              <br>
+              <br>
+              Решение реальных задач, например, автоматизация процессов
+            </div>
+            <div class="question">Закрепление теории на практике</div>
+            <div class="answer">
+              Теория + Практика = Успех
+              <br>
+              <br>
+              Каждое задание связано с теоретическими основами
+              <br>
+              Дети сразу видят, как работают их знания
+              <br>  
+              Улучшение понимания и запоминания материала
+            </div>
+            <div class="question">Гибкость и доступность</div>
+            <div class="answer">
+              KidzDev для всех:
+              <br>
+              <br>
+              Доступ с любого устройства (ПК, планшет, смартфон)
+              <br>
+              Разные уровни сложности: от новичков до продвинутых
+              <br>
+              Поддержка индивидуального темпа обучения
+            </div>
+            <div class="question">Адаптация под индивидуальные потребности</div>
+            <div class="answer">
+              Персонализированное обучение:
+              <br>
+              <br>
+              Анализ прогресса и рекомендации по улучшению
+              <br>
+              Задания, адаптированные под уровень и интересы ребенка
+              <br>
+              Поддержка разных стилей обучения (визуалы, кинестетики и т.д.)
+            </div>
+            <div class="question">Разнообразие обратной связи</div>
+            <div class="answer">
+              KidzDev помогает учиться:
+              <br>
+              <br>
+              Мгновенная проверка заданий
+              <br>
+              Развернутые комментарии от педагогов 
+            </div>
+            <div class="question">Комплексное развитие через отзывы</div>
+            <div class="answer">
+              KidzDev — это не только программирование:
+              <br>
+              <br>
+              Развитие логики, креативности, критического мышления
+              <br>
+              Обратная связь от педагогов и сверстников
+              <br>
+              Возможность делиться проектами и получать оценку
+            </div>
+          </div>
+          
+        </div>
+          </div>  
+        </div>
+        <div class="Functional">
+          <h3 class="common-title">Функционал</h3>
+          <div class="big-slider-container">
+            <div class="big-slider">
+              <div class="big-slide">
+                <img
+                  src="img/p1.jpg"
+                  alt="Изображение 1"
+                  class="small-image"
+                />
+              </div>
+              <div class="big-slide">
+                <img
+                  src="img/p2.jpg"
+                  alt="Изображение 2"
+                  class="small-image"
+                />
+              </div>
+              <div class="big-slide">
+                <img
+                  src="img/p3.jpg"
+                  alt="Изображение 3"
+                  class="small-image"
+                />
+              </div>
+              <div class="big-slide">
+                <img
+                  src="img/p4.jpg"
+                  alt="Изображение 4"
+                  class="small-image"
+                />
+              </div>
+              <div class="big-slide">
+                <img
+                  src="img/p5.jpg"
+                  alt="Изображение 5"
+                  class="small-image"
+                />
+              </div>
+              <div class="big-slide">
+                <img
+                  src="img/p6.jpg"
+                  alt="Изображение 6"
+                  class="small-image"
+                />
+              </div>
+            </div>
+            <div class="big-buttons">
+              <button class="big-button big-prev">❮</button>
+              <button class="big-button big-next">❯</button>
+            </div>
+          </div>
+        </div>
+        <div class="prospects">
+          <div class="container">
+          <h3 class="common-title">Перспективы роста</h3>
+          <h4 class="prospects-down-title">Распространение на другие технопарки, кружки, школы, и другие образовательные учреждения</h4>
+        </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__body">
+          <div class="footer__col">
+            <div class="footer__logo logo">
+              KidzDev
+            </div>
+            <p class="footer__text">
+              KidzDev — это будущее детского образования в программировании!
+              Попробуйте платформу уже сегодня!
+            </p>
+          </div>
+          <div class="footer__col">
+            <h6 class="footer__title">Связаться с нами</h6>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <div class="footer__link" >
+                  maximefimtsev@mail.ru</a
+                ></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ----------------------------------------------------- -->
+    <div class="news-popups">
+      <div class="popup-overlay" id="popup0">
+        <div class="popup-content">
+          <div class="registration-container">
+            <h1 class="reg-title">регистрация</h1>
+            <form id="Registration-form">
+              <div class="form-group">
+                <input
+                  placeholder="логин"
+                  type="text"
+                  id="username"
+                  name="username"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  placeholder="Email"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <div class="password-container">
+                  <input
+                    type="password"
+                    placeholder="пароль"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                  <button
+                    class="Registration-btn"
+                    type="button"
+                    id="togglePassword"
+                    aria-label="Toggle password visibility"
+                  >
+                    👁️
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit">зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup-overlay" id="popup1">
+        <div class="popup-content">
+          <div class="registration-container">
+            <h1 class="reg-title">вход</h1>
+            <form id="enter-form">
+              <div class="form-group">
+                <input
+                  placeholder="логин"
+                  type="text"
+                  id="username"
+                  name="username"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  placeholder="Email"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <div class="password-container">
+                  <input
+                    type="password"
+                    placeholder="пароль"
+                    id="password1"
+                    name="password"
+                    required
+                  />
+                  <button
+                    class="Registration-btn"
+                    type="button"
+                    id="togglePassword1"
+                    aria-label="Toggle password visibility"
+                  >
+                    👁️
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit">войти</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup-overlay" id="profile">
+        <div class="popup-content">
+            <div class="profile-card">
+              <div class="cover-photo">
+                  <img src="img/avatar_profile.jpg">
+              </div>
+              <h3 class="profile-name">Nickname</h3>
+              <p class="profile-about">UI/UX Designer <br> FrontEnd Developer</p>
+              <button class="profile-btn">Редактировать &#9998;</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="js/popup.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
